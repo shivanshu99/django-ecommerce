@@ -11,7 +11,6 @@ MERCHANT_KEY = 'Your Merchant key'
 from django.core.mail import send_mail
 from shop import models
 
-
 def index(request):
     allProds = []
     catprods = Product.objects.values('category', 'id')
@@ -25,7 +24,7 @@ def index(request):
     return render(request, 'shop/index.html', params)
 
 def searchMatch(query, item):
-    '''return true only if query matches the item'''
+
     if query in item.desc.lower() or query in item.product_name.lower() or query in item.category.lower():
         return True
     else:
@@ -123,7 +122,7 @@ def productView(request, myid):
 
 
 def checkout(request):
- 
+
     if request.method=="POST":
         items_json = request.POST.get('itemsJson', '')
         name = request.POST.get('name', '')

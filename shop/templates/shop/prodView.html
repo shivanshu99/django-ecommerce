@@ -57,7 +57,6 @@
 
     });
 
-    //Add Popover to cart
     $('#popcart').popover();
     updatePopover(cart);
 
@@ -105,7 +104,6 @@
         updatePopover(cart);
     }
 
-    // If plus or minus button is clicked, change the cart as well as the display value
     $('.divpr').on("click", "button.minus", function() {
         a = this.id.slice(7, );
         cart['pr' + a][0] = cart['pr' + a][0] - 1;

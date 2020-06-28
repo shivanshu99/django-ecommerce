@@ -4,7 +4,6 @@
 
 <div id="demo" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
     <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0"></li>
         <li data-target="#demo" data-slide-to="1"></li>
@@ -12,7 +11,6 @@
         <li data-target="#demo" data-slide-to="3"></li>
     </ul>
 
-    <!-- The slideshow -->
     <div class="carousel-inne">
         <div class="carousel-item active">
             <img src="https://cdn6.f-cdn.com/contestentries/1409766/31058863/5b9158b97cc6b_thumb900.jpg" alt="Los Angeles" width="100%" height="350">
@@ -310,8 +308,6 @@
         updateCart(cart);
 
     });
-
-    //Add Popover to cart
     $('#popcart').popover();
     updatePopover(cart);
 
@@ -359,7 +355,6 @@
         updatePopover(cart);
     }
 
-    // If plus or minus button is clicked, change the cart as well as the display value
     $('.divpr').on("click", "button.minus", function() {
         a = this.id.slice(7, );
         cart['pr' + a][0] = cart['pr' + a][0] - 1;
